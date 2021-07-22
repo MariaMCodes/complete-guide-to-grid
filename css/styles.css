@@ -1,0 +1,22 @@
+/* Fluid Columns Snippet
+
+Fluid width columns that break into more or less columns as space is available, with no media queries! */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* 200px is width */
+    /* OR this is better for small screens, once min() is better supported - grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    grid-gap: 1rem;
+}
+
+.grid>div {
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+body {
+    margin: 2rem;
+    font: 12px system-ui;
+}
